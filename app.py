@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, session, redirect
 #import numpy as np
 import pandas as pd
-from replacexx import getdata
+#from replacexx import getdata
 
 
 app = Flask(__name__)
