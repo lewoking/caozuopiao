@@ -58,22 +58,31 @@
         </h4>
             <h3></h3>
     </div>
-	<button onclick="myFunction()">点我</button>
+    <button onclick="myFunction()">点我</button>
+   
 	<script>
 function myFunction() {
     document.querySelector("table").style.backgroundColor = "red";
 }
 </script>
-<div>hello</div>
-<script src="clipboard.min.js">
-    
-    var clipboard = new Clipboard('.btn', {
-        target: function() {
-            return document.querySelector('div');
-        }
-       });</script>
+
 <button class="btn">Copy</button>
 
+<script src="clipboard.min.js"></script>
+
+<script>
+    var clipboard = new ClipboardJS('.btn', {
+        target: function() {
+            return document.querySelector('tbody');
+        }
+    });
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 
 </body>
 </html>
