@@ -22,8 +22,7 @@ def search():
         return render_template('search.html', tips="请输入正确的双编号")
 def send_post(name):
     df = pd.DataFrame({'A': [0, 1, 2, 3, 4],
-                   'B': [5, 6, 7, 8, 9],
-                   'C': ['y', 'e', 's', 'good', 'luck']})
+                   'C': ['y', 'e', 's', 'good', 'luck要长长吃吃吃吃吃吃静静静静']})
     return render_template('search.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

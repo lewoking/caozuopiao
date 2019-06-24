@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body bgcolor="DodgerBlue">
+    <div style="text-align:center;color:#F0F8FF">
+        <br/><br/><br/>
+        <font face="宋体" size="+5">监控倒闸操作辅助查询</font><br/>
+        <br/><br/>
+        <form action ='/' method='post'>
+            <input type="txt"  rows="4" cols="60" placeholder="请输入合上/断开...."
+                   name='operate' style="height:38px;width:120px;">
+            <input type="txt"  rows="4" cols="60" placeholder="请输入双编号...."
+                   name='username' style="height:38px;width:240px;">
+            <button type="submit" class="search-submit" style="height:35px;width:60px;">查询</button>
+        </form>
+        <br/><br/>
+        <h4 align="center">
+             C
+             <table border="1" class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>y</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>e</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>s</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>luck要长长吃吃吃吃吃吃静静静静</td>
+    </tr>
+  </tbody>
+</table>
+        </h4>
+            <h3></h3>
+    </div>
+	<button onclick="myFunction()">点我</button>
+	<script>
+function myFunction() {
+    document.querySelector("table").style.backgroundColor = "red";
+}
+</script>
+<div>hello</div>
+<script src="clipboard.min.js">
+    
+    var clipboard = new Clipboard('.btn', {
+        target: function() {
+            return document.querySelector('div');
+        }
+       });</script>
+<button class="btn">Copy</button>
+
+
+</body>
+</html>
