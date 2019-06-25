@@ -18,7 +18,8 @@
                    name='username' style="height:38px;width:240px;">
             <button type="submit" class="search-submit" style="height:35px;width:60px;">查询</button>
         </form>
-        <br/><br/>
+        <br/>
+        <h4 align="center">核对调度指令，确认与操作任务相符</h4>
         <h4 align="center">{% for table in tables %}
              {{titles[loop.index]}}
              {{ table|safe }}

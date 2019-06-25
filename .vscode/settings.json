@@ -13,5 +13,7 @@
             "server": "127.0.0.1",
             "username": "root"
         }
-    ]
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }

@@ -28,10 +28,10 @@ def getdata(operate, username):
     conn = create_engine(
         'mysql+pymysql://root:usbw@127.0.0.1:3306/jmjkxx?charset=utf8')
     hf = operate  # 操作接口
-    str_bh = 'username'  # 查询输入接口
+    str_bh = username  # 查询输入接口
     sql = 'SELECT concat(`站名`,`名称2`) FROM `荆门开关表` WHERE `编号`=\'' + \
         str_bh + '\' limit 1 '  # 查询线路名称
-    sqlr = 'SELECT * FROM `操作` limit 0,20'  # 默认结果
+    sqlr = 'SELECT * FROM `操作` where id > (SELECT MAX(id) FROM `操作`) - 20'  # 默认结果
     res = conn.execute(sql)
     row = res.fetchone()
 
