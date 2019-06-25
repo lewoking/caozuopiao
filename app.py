@@ -21,7 +21,7 @@ def search():
     if name:
         return send_post(operate,name)
     else:
-        return render_template('search.html', tips="请输入正确的双编号")
+        return render_template('search.html', tips="你啥都不输想干嘛？")
 def send_post(operate,name):
     df = getdata(operate,name)
     return render_template('search.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
@@ -34,7 +34,7 @@ def getdata(operate, username):
     res = conn.execute(sql)
     row = res.fetchone()
     if row is None:
-        error = (str_bh +'not in db',)
+        error = (str_bh +'  not in db !再来一次？',)
         df = pd.DataFrame(error)
     else:
         str_zmc = row[0]  # 获取查询结果
@@ -54,7 +54,7 @@ def getdata(operate, username):
             print('error')
         list_cz = [c.replace('××', str_bh) for c in list_cz]
         data = pd.DataFrame(list_cz) # list转pd
-        data.rename(columns={0: '操作项目'}, inplace=True)  # 注意这里0和1都不是字符串
+        data.rename(columns={0: '操作项目'}, inplace=True)  # 注意这里0不是字符串
         pd.io.sql.to_sql(data, '操作', con=conn, if_exists='append',
                             index=False)  # 写入历史数据库
         df = pd.read_sql(sqlr, conn)
