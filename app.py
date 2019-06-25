@@ -7,8 +7,13 @@ app = Flask(__name__)
 conn = create_engine(
         'mysql+pymysql://root:usbw@127.0.0.1:3306/jmjkxx?charset=utf8')
 sqlr = 'SELECT * FROM `操作` where id > (SELECT MAX(id) FROM `操作`) - 20'  # 默认结果
-df = pd.read_sql(sqlr, conn)
-conn.dispose()
+try:
+    df = pd.read_sql(sqlr, conn)
+except:
+    error = ('  无法连接到数据库  ',)
+    df = pd.DataFrame(error)
+else:
+    conn.dispose()
 
 @app.route('/', methods=['GET'])
 def html_table():
