@@ -5,3 +5,9 @@
 使用pandas与数据库交互，网页结果可以适配查询结果
 
 BY python flask mysql 
+
+数据库样式：
+
+![image](http://github.com/lewoking/caozuopiao/static/caozuo.png)
+and
+![image](http://github.com/lewoking/caozuopiao/static/breaklist.png)
