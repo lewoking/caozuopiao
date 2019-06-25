@@ -8,6 +8,6 @@ BY python flask mysql
 
 数据库样式：
 
-![image](http://github.com/lewoking/caozuopiao/raw/master/static/caozuo.png)
+![image](https://raw.githubusercontent.com/lewoking/caozuopiao/master/static/caozuo.png)
 and
 ![image](http://github.com/lewoking/caozuopiao/raw/master/static/breaklist.png)
