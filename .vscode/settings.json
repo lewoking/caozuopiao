@@ -1,4 +1,17 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
-    "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "autopep8",
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "jmjkxx",
+            "dialect": "MySQL",
+            "name": "jmjkxx",
+            "password": "usbw",
+            "port": 3307,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
 }

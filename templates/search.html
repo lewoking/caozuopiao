@@ -10,8 +10,10 @@
         <font face="宋体" size="+5">监控倒闸操作辅助查询</font><br/>
         <br/><br/>
         <form action ='/' method='post'>
-            <input type="txt"  rows="4" cols="60" placeholder="请输入合上/断开...."
-                   name='operate' style="height:38px;width:120px;">
+            <select name="operate" style="height:38px;width:96px;">
+                <option value="断开" selected="selected">断开</option>
+                <option value="合上">合上</option>
+                </select>
             <input type="txt"  rows="4" cols="60" placeholder="请输入双编号...."
                    name='username' style="height:38px;width:240px;">
             <button type="submit" class="search-submit" style="height:35px;width:60px;">查询</button>
@@ -24,5 +26,20 @@
             <h3>{{ tips }}</h3>
     </div>
 </body>
+<script type="text/javascript" src="/static/clipboard.min.js"></script>
+<button class="btn">Copy</button>
+<script>
+    var clipboard = new ClipboardJS('.btn', {
+        target: function() {
+            return document.querySelector('tbody');
+        }
+    });
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 </html>
 
