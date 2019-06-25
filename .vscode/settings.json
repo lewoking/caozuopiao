@@ -9,8 +9,8 @@
             "dialect": "MySQL",
             "name": "jmjkxx",
             "password": "usbw",
-            "port": 3307,
-            "server": "localhost",
+            "port": 3306,
+            "server": "127.0.0.1",
             "username": "root"
         }
     ]
